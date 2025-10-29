@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karnataka Flag</title>
+<style>
+body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  font-family: 'Noto Sans Kannada', sans-serif;
+}
+
+.flag {
+  width: 200px;
+  height: 200px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.yellow {
+  background-color: #FFD400;
+  height: 50%;
+}
+
+.red {
+  background-color: #E02B2B;
+  height: 50%;
+}
+
+.marquee {
+  position: absolute;
+  bottom: 10px;
+  white-space: nowrap;
+  animation: move 8s linear infinite;
+  font-size: 20px;
+  color: #FFD400;
+  text-shadow: 0 0 10px #FFD400, 0 0 20px #FFD400, 0 0 30px #FFD400;
+}
+
+@keyframes move {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+</head>
+<body>
+  <div class="flag">
+    <div class="yellow"></div>
+    <div class="red"></div>
+  </div>
+  <div class="marquee">ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವದ ಶುಭಾಶಯಗಳು</div>
+</body>
+</html>

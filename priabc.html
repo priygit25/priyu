@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center;
+            margin-top: 50px;
+            background-image: url('https://www.scobserver.in/wp-content/uploads/2024/05/A-Trial-for-Institutional-Sanctity.jpg');
+            background-size: cover;         /* makes the image cover the full screen */
+            background-position: center;    /* centers the image */
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Check Voting Eligibility</h2>
+
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" placeholder="Your name"><br><br>
+
+    <label for="age">Enter your age:</label>
+    <input type="number" id="age" placeholder="Your age"><br><br>
+
+    <button onclick="vote()">Check</button>
+
+    <p id="Result"></p>
+
+    <script>
+        function vote(){
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var result = document.getElementById("Result");
+
+            if (age >= 18) {
+                result.innerHTML =  "You are eligible to vote";
+            } else {
+                result.innerHTML = "You are still a child";
+            }
+        }
+    </script>
+
+</body>
+</html>
